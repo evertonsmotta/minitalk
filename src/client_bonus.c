@@ -70,6 +70,7 @@ void	send_message(char	**av)
 	while (int_client_pid[i])
 		send_bits_to_server(server_pid, int_client_pid[i++]);
 	send_bits_to_server(server_pid, 4);
+	free(int_client_pid);
 }
 
 int	main(int ac, char **av)
