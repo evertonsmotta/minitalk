@@ -6,11 +6,11 @@
 /*   By: evdos-sa <evdos-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 16:57:01 by evdos-sa          #+#    #+#             */
-/*   Updated: 2023/01/21 12:35:11 by evdos-sa         ###   ########.fr       */
+/*   Updated: 2023/07/06 16:07:59 by evdos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_nbrlen(long nbr, int base)
 {
@@ -30,7 +30,7 @@ int	ft_nbrlen(long nbr, int base)
 	return (i);
 }
 
-int	ft_putnbr_fd(int n, int fd)
+int	ft_putnbri_fd(int n, int fd)
 {
 	int	nbr;
 

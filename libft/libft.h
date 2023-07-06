@@ -6,30 +6,44 @@
 /*   By: evdos-sa <evdos-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 10:15:10 by evdos-sa          #+#    #+#             */
-/*   Updated: 2023/07/04 13:32:56 by evdos-sa         ###   ########.fr       */
+/*   Updated: 2023/07/06 17:31:29 by evdos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-//	Include external libraries
-
+/*	Include external libraries */
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
 # include <limits.h>
 
-//	Struct
+/* Libs for 'OPEN' */
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
 
+/* GNL - OPEN_MAX */
+# include <limits.h>
+
+/* PRINTF */
+# include <stdarg.h>
+# include <stdint.h>
+# include <inttypes.h>
+
+/* MINITALK */
+# include <signal.h>
+
+/* Struct */
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }				t_list;
 
-//	libc
+/* libc */
 
 long int	ft_isldigit(long int c);
 long		ft_atol(const char *str);
@@ -57,7 +71,7 @@ char		*ft_strrchr(const char *str, int c);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
 
-//	Additional functions
+/* Additional functions */
 
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
@@ -70,6 +84,33 @@ void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
+
+//	PRINTF
+
+int			ft_printf(const char *fstarg, ...);
+int			ft_putchari_fd(char c, int fd);
+int			ft_pointer(unsigned long long address);
+int			ft_iputstr_fd(char *s, int fd);
+int			ft_putnbri_fd(int n, int fd);
+int			ft_putnbase(unsigned long nbr, const char *base, int fd);
+int			ft_printfhexa(size_t num, const char format);
+char		*ft_strchr(const char *s, int c);
+void		ft_putstr_fd(char *s, int fd);
+size_t		ft_strlen(const char *str);
+size_t		ft_uputnbr_fd(size_t n, int fd);
+
+// GET NEXT LINE
+
+char		*get_next_line(int fd);
+char		*fd_read(int fd, char *temp_line);
+char		*fd_lastline(char *temp);
+char		*fd_newline(char *temp_line);
+char		*fd_free(char *temp_line, char *read_buf);
+size_t		ft_strlen(const char *str);
+void		*ft_calloc(size_t nmemb, size_t size);
+void		*ft_memset(void *s, int c, size_t n);
+char		*ft_strjoin_gnl(char const *s1, char const *s2);
+char		*ft_strchr(const char *s, int c);
 
 // Bonus part
 

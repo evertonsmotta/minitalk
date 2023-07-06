@@ -6,7 +6,7 @@
 #    By: evdos-sa <evdos-sa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/12 11:32:44 by evdos-sa          #+#    #+#              #
-#    Updated: 2023/07/04 13:32:51 by evdos-sa         ###   ########.fr        #
+#    Updated: 2023/07/06 18:22:02 by evdos-sa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ SRCS = \
 	ft_strrchr.c ft_tolower.c ft_toupper.c ft_substr.c ft_strjoin.c \
 	ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_putchar_fd.c \
 	ft_putnbr_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_striteri.c\
-	ft_atol.c ft_isldigit.c
+	ft_atol.c ft_isldigit.c ft_printf.c ft_printfchars.c ft_printfhexa.c\
+	ft_printfnum.c ft_printfpointer.c 
 
 B_SRCS = \
 	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
@@ -33,24 +34,24 @@ NAME = libft.a
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar -crs $@ $^
+	@ar -crs $@ $^
 
 bonus: $(OBJS) $(B_OBJS)
-	ar -crs $(NAME) $^
+	@ar -crs $(NAME) $^
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $^ -o $@
+	@$(CC) $(CFLAGS) -c $^ -o $@
 
 clean:
-	rm -rf $(OBJS) $(B_OBJS)
+	@rm -rf $(OBJS) $(B_OBJS)
 
 fclean: clean
-	rm -rf $(NAME)
+	@rm -rf $(NAME)
 
 re: fclean all
 
 so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(B_SRCS)
-	cc -nostartfiles -shared -o libft.so $(OBJS) $(B_OBJS)
+	@$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(B_SRCS)
+	@cc -nostartfiles -shared -o libft.so $(OBJS) $(B_OBJS)
 
 .PHONY: all bonus clean fclean re

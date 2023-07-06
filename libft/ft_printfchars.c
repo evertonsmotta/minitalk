@@ -6,11 +6,11 @@
 /*   By: evdos-sa <evdos-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 12:17:44 by evdos-sa          #+#    #+#             */
-/*   Updated: 2023/01/21 13:36:52 by evdos-sa         ###   ########.fr       */
+/*   Updated: 2023/07/06 16:08:30 by evdos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {
@@ -46,7 +46,7 @@ void	ft_putstr_fd(char *s, int fd)
 	}
 }
 
-int	ft_putchar_fd(char c, int fd)
+int	ft_putchari_fd(char c, int fd)
 {
 	write (fd, &c, 1);
 	return (1);

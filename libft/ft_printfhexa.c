@@ -6,11 +6,11 @@
 /*   By: evdos-sa <evdos-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 12:27:32 by evdos-sa          #+#    #+#             */
-/*   Updated: 2023/01/21 12:31:07 by evdos-sa         ###   ########.fr       */
+/*   Updated: 2023/07/06 17:29:00 by evdos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_hexanum(size_t num)
 {
@@ -51,7 +51,7 @@ int	ft_printfhexa(size_t num, const char category)
 	if (num != 0)
 		ft_findhexa(num, category);
 	else
-		return (ft_putchar_fd('0', 1));
+		return (ft_putchari_fd('0', 1));
 	return (ft_hexanum(num));
 }
 

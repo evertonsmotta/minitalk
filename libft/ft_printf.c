@@ -6,11 +6,11 @@
 /*   By: evdos-sa <evdos-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 12:24:08 by evdos-sa          #+#    #+#             */
-/*   Updated: 2023/01/21 13:37:53 by evdos-sa         ###   ########.fr       */
+/*   Updated: 2023/07/06 17:28:30 by evdos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_category(va_list ap, const char category)
 {
@@ -18,19 +18,19 @@ int	ft_category(va_list ap, const char category)
 
 	output = 0;
 	if (category == 'c')
-		output = (ft_putchar_fd(va_arg(ap, int), 1));
+		output = (ft_putchari_fd(va_arg(ap, int), 1));
 	else if (category == 's')
 		output = ft_iputstr_fd(va_arg(ap, char *), 1);
 	else if (category == 'p')
 		output = ft_pointer(va_arg(ap, unsigned long long));
 	else if (category == 'd' || category == 'i')
-		output = ft_putnbr_fd(va_arg(ap, int), 1);
+		output = ft_putnbri_fd(va_arg(ap, int), 1);
 	else if (category == 'u')
 		output = ft_uputnbr_fd(va_arg(ap, unsigned int), 1);
 	else if (category == 'x' || category == 'X')
 		output = ft_printfhexa(va_arg(ap, unsigned int), category);
 	else if (category == '%')
-		output = ft_putchar_fd('%', 1);
+		output = ft_putchari_fd('%', 1);
 	return (output);
 }
 
@@ -51,7 +51,7 @@ int	ft_printf(const char *fstarg, ...)
 			i++;
 		}
 		else
-			output += ft_putchar_fd(fstarg[i], 1);
+			output += ft_putchari_fd(fstarg[i], 1);
 		i++;
 	}
 	va_end(ap);

@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: evdos-sa <evdos-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/07 21:09:19 by eschirni          #+#    #+#             */
-/*   Updated: 2023/07/05 11:22:54 by evdos-sa         ###   ########.fr       */
+/*   Created: 2023/07/06 18:20:28 by evdos-sa          #+#    #+#             */
+/*   Updated: 2023/07/06 18:20:30 by evdos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#include "../libft/libft.h"
 
 void	send_bits(int server_pid, int c)
 {

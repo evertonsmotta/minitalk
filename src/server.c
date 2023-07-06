@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: evdos-sa <evdos-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/07 20:22:26 by eschirni          #+#    #+#             */
-/*   Updated: 2023/07/05 11:22:56 by evdos-sa         ###   ########.fr       */
+/*   Created: 2023/07/06 18:20:14 by evdos-sa          #+#    #+#             */
+/*   Updated: 2023/07/06 18:20:16 by evdos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#include "../libft/libft.h"
 
 void	sigusr_handler(int signal)
 {
