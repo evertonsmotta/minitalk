@@ -36,7 +36,7 @@ void	send_message(int pid)
 	int		i;
 
 	i = -1;
-	msg = "Sua mensagem foi recebida";
+	msg = "Server: Message received!";
 	while (msg[++i])
 		send_bits_to_clinte(pid, msg[i]);
 	send_bits_to_clinte(pid, '\n');

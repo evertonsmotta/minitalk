@@ -69,24 +69,3 @@ re_bonus: fclean bonus
 
 .PHONY: clean fclean all re
 
-# MAKE DO MINITALK
-
-# all:
-# 	@cd ft_printf && make all
-# 	@gcc -Wall -Wextra -Werror src/server.c ft_printf/libftprintf.a -o server
-# 	@gcc -Wall -Wextra -Werror src/client.c ft_printf/libftprintf.a -o client
-
-# clean:
-# 	@cd ft_printf && make clean
-# 	@rm -f server
-# 	@rm -f client
-
-# fclean: clean
-# 	@cd ft_printf && make fclean
-
-# re: fclean all
-
-# bonus: fclean
-# 	@cd ft_printf && make all
-# 	@gcc -Wall -Wextra -Werror "bonus src/server_bonus.c" ft_printf/libftprintf.a -o server
-# 	@gcc -Wall -Wextra -Werror "bonus src/client_bonus.c" ft_printf/libftprintf.a -o client

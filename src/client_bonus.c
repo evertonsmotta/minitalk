@@ -82,7 +82,7 @@ int	main(int ac, char **av)
 	signal(SIGUSR2, server_response);
 	if (ac != 3)
 	{
-		ft_printf("<./client> <PID-SERVER> <Mensagem>\n");
+		ft_printf("<./client> <Server_PID> <Mensagem>\n");
 		return (1);
 	}
 	else if (ac == 3)

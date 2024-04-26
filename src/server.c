@@ -12,7 +12,7 @@
 
 #include "../libft/libft.h"
 
-void	sigusr_handler(int signal)
+void	client_response(int signal)
 {
 	static int	bit_server;
 	static char	c;
@@ -44,7 +44,7 @@ int	main(int ac, char *av[])
 	ft_printf("Waiting messagem from client\n");
 	while (ac == 1)
 	{
-		signal(SIGUSR1, sigusr_handler);
-		signal(SIGUSR2, sigusr_handler);
+		signal(SIGUSR1, client_response);
+		signal(SIGUSR2, client_response);
 	}
 }

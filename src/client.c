@@ -35,7 +35,7 @@ int	main(int ac, char *av[])
 
 	if (ac != 3)
 	{
-		printf("./client <server_pid>  <message to write in server>\n");
+		ft_printf("<./client> <Server_PID> <Mensagem>\n");
 		return (1);
 	}
 	else
